@@ -19,14 +19,14 @@ jobs:
 
     - name: install uv
       run: |
-        python3 -m pip install --upgrade pip
+        python -m pip install --upgrade pip
 	pip install uv
 
     - name: sync uv
       run: uv sync
 
     - name: init sqlite db
-      run: uv run python3 main.py
+      run: uv run python main.py
 
     - name: deploy to GH pages
       uses: peaceiris/action-gh-pages@v3
