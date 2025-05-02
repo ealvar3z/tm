@@ -1,0 +1,36 @@
+name: build and publish
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: checkout code
+      uses: actions/checkout@v3
+
+    - name: set up python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: install uv
+      run: |
+        python3 -m pip install --upgrade pip
+	pip install uv
+
+    - name: sync uv
+      run: uv sync
+
+    - name: init sqlite db
+      run: uv run python3 main.py
+
+    - name: deploy to GH pages
+      uses: peaceiris/action-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+	publish_dir: ./build
+      

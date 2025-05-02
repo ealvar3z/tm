@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Today's Mathematics (TM)</title>
+    <style>
+        body { font-family: monospace; background: #ffffea; color: #333; padding: 2em; }
+        .calc    { margin-bottom: 1em; font-family: monospace; }
+        .virtue  { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; }
+        .desc    { margin-bottom: 1em; }
+        .quote   { font-style: italic; }
+        .author  { margin-top: 0.5em; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="intro">
+            <h2><strong>What is "Today's Mathematics"?</strong><br></h2>
+            We compute <code>(month + day) mod 5</code> to select one of five Stoic principles:
+        <ul>
+           <li><strong>0:</strong> Logos</li>
+           <li><strong>1:</strong> Justice</li>
+           <li><strong>2:</strong> Discipline</li>
+           <li><strong>3:</strong> Courage</li>
+           <li><strong>4:</strong> Wisdom</li>
+        </ul>
+    </div>
+    <div class="calc">
+        Computation: <code>{{ month }} + {{ day }} = {{ total }} = {{ value }} (mod 5)</code>
+    </div>
+    <div class="virtue">Today's Principle: {{ virtue }}</div>
+    <div class="desc"><strong>Meaning:</strong> {{ desc }}</div>
+    <div class="quote"><strong>"{{ quote }}"</strong></div>
+    <div class="author"><strong>— {{ author }}</strong></div>
+
+    <hr>
+    <div><small>Date: {{ today }} | Value: {{ value }}</small></div>
+</body>
+</html>
