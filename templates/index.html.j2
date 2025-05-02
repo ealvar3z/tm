@@ -4,12 +4,31 @@
     <meta charset="utf-8">
     <title>Today's Mathematics (TM)</title>
     <style>
-        body { font-family: monospace; background: #ffffea; color: #333; padding: 2em; }
+	/* Base */
+        body { 
+		font-family: monospace; 
+		background: #ffffea; 
+		color: #333; 
+		padding: 2em; 
+	}
         .calc    { margin-bottom: 1em; font-family: monospace; }
         .virtue  { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; }
         .desc    { margin-bottom: 1em; }
         .quote   { font-style: italic; }
         .author  { margin-top: 0.5em; font-size: 0.9em; color: #666; }
+
+	/* Mobile support */
+	@media (max-width: 600 px) {
+		body {
+			padding: 1em;
+		}
+		.virtue {
+			font-size: 1.25em;
+		}
+		.intro ul {
+			padding-left: 1em;
+		}
+	}
     </style>
 </head>
 <body>
