@@ -42,7 +42,7 @@ jobs:
         run: uv run python data/init_db.py
 
       - name: Build static site
-        run: uv run python build.py
+        run: uv run python main.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
