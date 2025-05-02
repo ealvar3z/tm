@@ -44,7 +44,7 @@ try:
         quotes = [
             (0, 0, "To follow nature is to follow God.", "Marcus Aurelius"),
             (1, 1, "Injustice anywhere is a threat to justice everywhere.", "Seneca"),
-            (2, 2, "No man is free who is not master of himself.", "Epictetus"),
+            (2, 2, "Instant willing obedience. Respect for authority. Self-reliance and teamwork", "Marine Corps Manual"),
             (3, 3, "You have power over your mind—not outside events.", "Marcus Aurelius"),
             (4, 4, "Wisdom begins in wonder.", "Socrates")
         ]
